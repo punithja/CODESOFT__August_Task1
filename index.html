@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <section class="hero-section">
+
+      <nav class="navbar">
+        <h2><span>Puni</span> photoshop..</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div class="hero-text">
+        <h2>karnataka editz</h2>
+        <p>Welcome to world of pictures</p>
+        <a href="#">Buy photo Now</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo">
+        <span class="dot"></span>
+        Photo <br />
+        Shop
+        <span class="dot"></span>
+      </div>
+      <div class="desc">
+        <h3>have a look</h3>
+        <p>
+          
+        </p>
+      </div>
+      <div class="social">
+        <div>
+          <button><i class="fa-solid fa-phone"></i>Call Us</button>
+          </div>
+    </footer>
+  </body>
+
+</html>
+<style>
+ 221 changes: 221 additions & 0 deletions221  
+Landing Page/style.css
+@@ -0,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: 1.5rem;
+  --head: calc(1rem + 5vw);
+  --bg-color: rgb(4, 14, 4);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: url("1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  animation: slide 1s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0rem 1.5rem;
+  color: white;
+  transform: translateY(-100%);
+  animation: movedown 850ms ease-in 1s forwards;
+}
+
+@keyframes movedown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 3rem;
+  font-size: var(--text);
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid var(--bg-color);
+  color: rgb(15, 152, 206);
+}
+
+.hero-text {
+  color: rgb(20, 7, 7);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.hero-text::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  top: 0;
+  opacity: 0.6;
+}
+
+.hero-text a {
+  color: white;
+  background: var(--bg-color);
+  font-weight: 900;
+  font-size: var(--text);
+  padding: 0.8rem 1rem;
+  margin: 0.8rem auto;
+  display: block;
+  text-decoration: none;
+  transition: opacity 250ms linear;
+}
+
+.hero-text a:hover {
+  opacity: 0.8;
+}
+
+.hero-text h2 {
+  font-size: calc(1rem + 5vw);;
+}
+ span{
+  color: rgb(41, 241, 23);
+ }
+.hero-text p {
+  font-size: 3rem;
+}
+
+
+.about .about_content{
+  width: 100%;
+  margin: auto;
+}
+
+.about_content .title span{
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'poppins', sans-serif;
+  position: relative;
+}
+
+.about_content .title span::after{
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 3px;
+  border-radius: 5rem;
+  margin-bottom: -4rem;
+  background-color:var(--primary-color);
+}
+
+.left{
+  width: 55%;
+}
+.left img{
+ width: 35rem;
+ height: 40rem;
+ box-shadow: var(--shadow);
+}
+.about-details{
+  margin: 4rem 0;
+  display: flex;
+  gap: 8rem;
+}
+
+.right h3{
+  font-size: 1.7rem;
+  color: var(--black-color);
+  margin-bottom: 2rem;
+}
+.right p{
+  font-size: 1.9rem;
+  text-align: justify;
+  font-family: "poppins", sans-serif;
+}
+
+
+/* Footer */
+footer {
+  color: rgb(60, 8, 216);
+  background: rgb(35, 140, 210);
+  padding: 3rem 0;
+  text-align: center;
+  font-size: large;
+  font-size: 1.5rem;
+}
+footer .logo {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+footer .logo .dot {
+  background: brown;
+}
+footer h3 {
+  color:rgb(209, 203, 21);
+  margin-bottom: 0.5rem;
+  font-size: x-large;
+}
+footer p {
+  width: 50%;
+  margin: 0 auto 1rem auto;
+  color: rgb(219, 219, 241);
+}
+footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .social button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  width: 100px;
+  height: 60px;
+  border-radius: 15px;
+  background-color:rgb(44, 243, 9);
+  color: rgb(232, 17, 17);
+  margin-right: 0.5rem;
+}
+</style>
